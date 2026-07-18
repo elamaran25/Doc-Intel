@@ -1,0 +1,33 @@
+# --- Core ---
+python-dotenv==1.0.1
+pydantic==2.8.2
+
+# --- Ingestion / preprocessing ---
+pypdf==4.3.1
+pdf2image==1.17.0
+pillow==10.4.0
+
+# --- Model serving / extraction ---
+openai==1.40.0          # used as a generic client for Groq / Together / Fireworks (OpenAI-compatible APIs)
+httpx==0.27.0
+
+# --- Agentic validation ---
+langgraph==0.2.14
+langchain-core==0.2.38
+
+# --- Serving ---
+fastapi==0.112.0
+uvicorn[standard]==0.30.5
+python-multipart==0.0.9
+
+# --- Eval / experiment tracking ---
+mlflow==2.15.1
+scikit-learn==1.5.1
+pandas==2.2.2
+
+# --- Dashboard ---
+streamlit==1.37.1
+
+# --- Dev / test ---
+pytest==8.3.2
+pytest-asyncio==0.23.8
