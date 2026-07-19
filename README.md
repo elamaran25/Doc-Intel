@@ -47,7 +47,7 @@ doc-intel-pipeline/
 
 ```bash
 pip install -r requirements.txt
-cp .env.example .env   # fill in VLM_API_KEY etc.
+cp  .env   # fill in VLM_API_KEY etc.
 ```
 
 Run the API:
