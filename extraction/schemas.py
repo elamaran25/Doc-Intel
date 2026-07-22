@@ -1,10 +1,5 @@
 """
-Pydantic schemas for extracted document fields.
-
-Swap the fields inside `ExtractedDocument` for whatever public dataset you
-land on (IRS forms, SEC filings, insurance policies). Keep the surrounding
-structure (confidence, page_span, validation hooks) — that's the part that's
-reusable across domains.
+Pydantic schemas for extracted document fields (W-2-style tax document).
 """
 
 from __future__ import annotations
@@ -35,16 +30,12 @@ class ExtractedField(BaseModel):
 
 
 class ExtractedDocument(BaseModel):
-    """
-    Example schema for a tax-form-style document (swap for your chosen domain).
-    Every field is an ExtractedField so the validation agent can reason about
-    confidence and flag individual fields, not just the whole document.
-    """
+    """Schema for a W-2-style synthetic tax document."""
 
     document_type: ExtractedField
     payer_name: ExtractedField
     recipient_name: ExtractedField
-    identifier: ExtractedField  # e.g. SSN/EIN/policy number — validate format, don't store real PII
+    identifier: ExtractedField  # SSN-shaped id — validate format, never store real PII
     tax_year: ExtractedField
     total_amount: ExtractedField
     line_items: list[ExtractedField] = Field(default_factory=list)
@@ -75,7 +66,7 @@ class ValidationResult(BaseModel):
 
 
 class ModelRunMetadata(BaseModel):
-    """Attach to every extraction call — this is what feeds the cost/eval dashboard."""
+    """Attach to every extraction call — feeds the cost/eval dashboard."""
 
     model_name: str
     provider: str  # e.g. "groq", "vllm-local", "together"

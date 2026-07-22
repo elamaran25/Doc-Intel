@@ -1,0 +1,10 @@
+{
+  "document_type": "W-2",
+  "payer_name": "Perry-Thompson",
+  "recipient_name": "Michele Craig",
+  "identifier": "502-57-9023",
+  "tax_year": "2023",
+  "total_amount": "146,323.28",
+  "federal_tax_withheld": "25,303.89",
+  "employer_ein": "13-8873885"
+}

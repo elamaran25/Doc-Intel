@@ -1,0 +1,10 @@
+{
+  "document_type": "W-2",
+  "payer_name": "Butler PLC",
+  "recipient_name": "Ariel Soto",
+  "identifier": "403-25-6450",
+  "tax_year": "2023",
+  "total_amount": "123,661.64",
+  "federal_tax_withheld": "24,894.26",
+  "employer_ein": "74-8081780"
+}

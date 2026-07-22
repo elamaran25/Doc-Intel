@@ -1,0 +1,10 @@
+{
+  "document_type": "W-2",
+  "payer_name": "Thompson-Dixon",
+  "recipient_name": "Jose Castro",
+  "identifier": "785-69-8436",
+  "tax_year": "2023",
+  "total_amount": "43,994.09",
+  "federal_tax_withheld": "4,549.94",
+  "employer_ein": "49-9984758"
+}

@@ -1,0 +1,10 @@
+{
+  "document_type": "W-2",
+  "payer_name": "Carroll Inc",
+  "recipient_name": "Jon Cole",
+  "identifier": "164-42-2931",
+  "tax_year": "2023",
+  "total_amount": "114,518.99",
+  "federal_tax_withheld": "24,314.34",
+  "employer_ein": "73-8541208"
+}

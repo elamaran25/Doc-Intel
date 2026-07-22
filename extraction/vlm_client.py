@@ -1,8 +1,7 @@
 """
-Async VLM client. Works against any OpenAI-compatible endpoint — a local
-vLLM server, Groq, Together, or Fireworks — so the same code path is used
-for both the self-hosted comparison and the hosted-API comparison in the
-cost/latency dashboard.
+Async VLM client. Works against any OpenAI-compatible endpoint — local vLLM,
+Groq, Together, or Fireworks — so the same code path serves both the
+self-hosted and hosted-API comparisons in the cost/latency dashboard.
 """
 
 from __future__ import annotations
@@ -30,7 +29,7 @@ class VLMConfig:
     base_url: str
     api_key: str
     top_k: int | None = None
-    enable_thinking: bool = False  # matches production flag pattern for Qwen models
+    enable_thinking: bool = False
 
 
 def build_client(config: VLMConfig) -> AsyncOpenAI:
@@ -42,11 +41,6 @@ async def extract_document(
     page_content: list[dict],
     schema_json: str | None = None,
 ) -> tuple[ExtractedDocument | None, ModelRunMetadata]:
-    """
-    Run extraction for one document against one model. Returns the parsed
-    document (or None on parse failure — validation stage handles retry) plus
-    run metadata for the eval/cost dashboard.
-    """
     client = build_client(config)
     schema_hint = schema_json or ExtractedDocument.model_json_schema()
 
@@ -65,7 +59,7 @@ async def extract_document(
     response = await client.chat.completions.create(
         model=config.model_name,
         messages=messages,
-        temperature=0,  # deterministic extraction — avoids the temperature-drift issue seen in eval
+        temperature=0,
         extra_body=extra_body or None,
     )
     latency_ms = (time.perf_counter() - start) * 1000
@@ -79,7 +73,7 @@ async def extract_document(
         input_tokens=getattr(usage, "prompt_tokens", None),
         output_tokens=getattr(usage, "completion_tokens", None),
         latency_ms=latency_ms,
-        estimated_cost_usd=None,  # fill in from provider's published $/token rate
+        estimated_cost_usd=None,
     )
 
     try:
@@ -87,5 +81,4 @@ async def extract_document(
         parsed = ExtractedDocument.model_validate_json(cleaned)
         return parsed, metadata
     except Exception:
-        # parse failure — validation graph decides whether to retry
         return None, metadata

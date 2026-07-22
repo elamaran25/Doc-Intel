@@ -1,0 +1,10 @@
+{
+  "document_type": "W-2",
+  "payer_name": "Miller-Beck",
+  "recipient_name": "Christopher Larsen",
+  "identifier": "729-85-7448",
+  "tax_year": "2023",
+  "total_amount": "74,896.47",
+  "federal_tax_withheld": "16,384.52",
+  "employer_ein": "92-3857985"
+}

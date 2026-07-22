@@ -1,0 +1,102 @@
+[
+  {
+    "doc_id": "w2_0000",
+    "pdf": "data/synthetic_w2_train/documents/w2_0000.pdf",
+    "ground_truth": "data/synthetic_w2_train/ground_truth/w2_0000.json"
+  },
+  {
+    "doc_id": "w2_0001",
+    "pdf": "data/synthetic_w2_train/documents/w2_0001.pdf",
+    "ground_truth": "data/synthetic_w2_train/ground_truth/w2_0001.json"
+  },
+  {
+    "doc_id": "w2_0002",
+    "pdf": "data/synthetic_w2_train/documents/w2_0002.pdf",
+    "ground_truth": "data/synthetic_w2_train/ground_truth/w2_0002.json"
+  },
+  {
+    "doc_id": "w2_0003",
+    "pdf": "data/synthetic_w2_train/documents/w2_0003.pdf",
+    "ground_truth": "data/synthetic_w2_train/ground_truth/w2_0003.json"
+  },
+  {
+    "doc_id": "w2_0004",
+    "pdf": "data/synthetic_w2_train/documents/w2_0004.pdf",
+    "ground_truth": "data/synthetic_w2_train/ground_truth/w2_0004.json"
+  },
+  {
+    "doc_id": "w2_0005",
+    "pdf": "data/synthetic_w2_train/documents/w2_0005.pdf",
+    "ground_truth": "data/synthetic_w2_train/ground_truth/w2_0005.json"
+  },
+  {
+    "doc_id": "w2_0006",
+    "pdf": "data/synthetic_w2_train/documents/w2_0006.pdf",
+    "ground_truth": "data/synthetic_w2_train/ground_truth/w2_0006.json"
+  },
+  {
+    "doc_id": "w2_0007",
+    "pdf": "data/synthetic_w2_train/documents/w2_0007.pdf",
+    "ground_truth": "data/synthetic_w2_train/ground_truth/w2_0007.json"
+  },
+  {
+    "doc_id": "w2_0008",
+    "pdf": "data/synthetic_w2_train/documents/w2_0008.pdf",
+    "ground_truth": "data/synthetic_w2_train/ground_truth/w2_0008.json"
+  },
+  {
+    "doc_id": "w2_0009",
+    "pdf": "data/synthetic_w2_train/documents/w2_0009.pdf",
+    "ground_truth": "data/synthetic_w2_train/ground_truth/w2_0009.json"
+  },
+  {
+    "doc_id": "w2_0010",
+    "pdf": "data/synthetic_w2_train/documents/w2_0010.pdf",
+    "ground_truth": "data/synthetic_w2_train/ground_truth/w2_0010.json"
+  },
+  {
+    "doc_id": "w2_0011",
+    "pdf": "data/synthetic_w2_train/documents/w2_0011.pdf",
+    "ground_truth": "data/synthetic_w2_train/ground_truth/w2_0011.json"
+  },
+  {
+    "doc_id": "w2_0012",
+    "pdf": "data/synthetic_w2_train/documents/w2_0012.pdf",
+    "ground_truth": "data/synthetic_w2_train/ground_truth/w2_0012.json"
+  },
+  {
+    "doc_id": "w2_0013",
+    "pdf": "data/synthetic_w2_train/documents/w2_0013.pdf",
+    "ground_truth": "data/synthetic_w2_train/ground_truth/w2_0013.json"
+  },
+  {
+    "doc_id": "w2_0014",
+    "pdf": "data/synthetic_w2_train/documents/w2_0014.pdf",
+    "ground_truth": "data/synthetic_w2_train/ground_truth/w2_0014.json"
+  },
+  {
+    "doc_id": "w2_0015",
+    "pdf": "data/synthetic_w2_train/documents/w2_0015.pdf",
+    "ground_truth": "data/synthetic_w2_train/ground_truth/w2_0015.json"
+  },
+  {
+    "doc_id": "w2_0016",
+    "pdf": "data/synthetic_w2_train/documents/w2_0016.pdf",
+    "ground_truth": "data/synthetic_w2_train/ground_truth/w2_0016.json"
+  },
+  {
+    "doc_id": "w2_0017",
+    "pdf": "data/synthetic_w2_train/documents/w2_0017.pdf",
+    "ground_truth": "data/synthetic_w2_train/ground_truth/w2_0017.json"
+  },
+  {
+    "doc_id": "w2_0018",
+    "pdf": "data/synthetic_w2_train/documents/w2_0018.pdf",
+    "ground_truth": "data/synthetic_w2_train/ground_truth/w2_0018.json"
+  },
+  {
+    "doc_id": "w2_0019",
+    "pdf": "data/synthetic_w2_train/documents/w2_0019.pdf",
+    "ground_truth": "data/synthetic_w2_train/ground_truth/w2_0019.json"
+  }
+]

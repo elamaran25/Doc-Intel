@@ -4,12 +4,6 @@ Agentic validation layer built as an explicit LangGraph state machine.
 Flow:
     extract -> check_fields -> (valid: finalize) | (invalid, retries left: retry_extraction)
                                                    | (invalid, no retries left: escalate)
-
-This is the piece that turns a script into a pipeline: instead of trusting
-whatever the VLM returns, every extraction is checked against rule-based
-validators, and low-confidence or inconsistent documents get either a
-corrective retry or a flag for human review rather than silently shipping
-bad data.
 """
 
 from __future__ import annotations
@@ -42,9 +36,6 @@ class PipelineState(TypedDict):
 
 
 # --- Validation rules -------------------------------------------------------
-# Keep these as small, named, independently testable functions. That's what
-# lets you show a "validation coverage" table in the README instead of a
-# black box.
 
 def _validate_identifier_format(doc: ExtractedDocument) -> ValidationIssue | None:
     value = doc.identifier.value
@@ -152,7 +143,7 @@ def build_validation_graph():
         route_after_check,
         {"finalize": "finalize", "retry": "retry", "escalate": "escalate"},
     )
-    graph.add_edge("retry", "extract")  # loop back for a corrective re-extraction
+    graph.add_edge("retry", "extract")
     graph.add_edge("finalize", END)
     graph.add_edge("escalate", END)
 

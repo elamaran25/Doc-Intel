@@ -1,0 +1,10 @@
+{
+  "document_type": "W-2",
+  "payer_name": "Johnson-Johnson",
+  "recipient_name": "Teresa James",
+  "identifier": "654-11-7245",
+  "tax_year": "2024",
+  "total_amount": "32,649.68",
+  "federal_tax_withheld": "3,381.28",
+  "employer_ein": "97-4633934"
+}

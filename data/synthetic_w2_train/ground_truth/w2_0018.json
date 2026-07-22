@@ -1,0 +1,10 @@
+{
+  "document_type": "W-2",
+  "payer_name": "Hanson, Salazar and Ellis",
+  "recipient_name": "David Thompson",
+  "identifier": "185-12-8421",
+  "tax_year": "2023",
+  "total_amount": "155,945.21",
+  "federal_tax_withheld": "30,290.16",
+  "employer_ein": "11-5717697"
+}

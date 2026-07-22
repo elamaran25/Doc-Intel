@@ -1,0 +1,10 @@
+{
+  "document_type": "W-2",
+  "payer_name": "Snow-Fox",
+  "recipient_name": "Cynthia Johnson",
+  "identifier": "368-87-7877",
+  "tax_year": "2023",
+  "total_amount": "160,915.38",
+  "federal_tax_withheld": "23,774.79",
+  "employer_ein": "93-1302547"
+}

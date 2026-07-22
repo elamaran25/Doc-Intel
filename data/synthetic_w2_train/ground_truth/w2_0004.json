@@ -1,0 +1,10 @@
+{
+  "document_type": "W-2",
+  "payer_name": "Costa Ltd",
+  "recipient_name": "Daniel Kim",
+  "identifier": "882-66-9123",
+  "tax_year": "2024",
+  "total_amount": "138,329.60",
+  "federal_tax_withheld": "24,051.11",
+  "employer_ein": "80-4910508"
+}

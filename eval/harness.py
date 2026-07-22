@@ -1,9 +1,6 @@
 """
-Evaluation harness.
-
-Design principle (learned the hard way in production): train and test corpora
-must be disjoint. This harness enforces cross-corpus evaluation by construction
-— you pass two separate corpus paths in, not a single one you split yourself.
+Evaluation harness. Enforces cross-corpus evaluation by construction — you
+pass two separate corpus paths in, not a single one you split yourself.
 """
 
 from __future__ import annotations
@@ -51,13 +48,6 @@ async def evaluate_model_on_corpus(
     corpus_name: str,
     run_experiment: str = "doc-intel-eval",
 ) -> EvalRunResult:
-    """
-    Run one model against one corpus. Call this twice — once per corpus — with
-    train/test corpora that never overlap, and compare the two accuracy
-    numbers. A big drop from corpus A to corpus B is the signal that a prior
-    "83%" number was inflated by same-corpus leakage rather than real
-    generalization.
-    """
     mlflow.set_experiment(run_experiment)
     field_hits: dict[str, int] = {}
     field_totals: dict[str, int] = {}
@@ -97,7 +87,7 @@ async def evaluate_model_on_corpus(
         mlflow.log_metric("overall_accuracy", overall)
         mlflow.log_metric("avg_latency_ms", avg_latency)
 
-        result = EvalRunResult(
+        return EvalRunResult(
             model_name=config.model_name,
             corpus_name=corpus_name,
             field_accuracy=field_accuracy,
@@ -105,11 +95,9 @@ async def evaluate_model_on_corpus(
             avg_latency_ms=avg_latency,
             n_examples=len(corpus),
         )
-        return result
 
 
 def summarize_runs(results: list[EvalRunResult]) -> pd.DataFrame:
-    """Build the comparison table for the README / dashboard."""
     rows = [
         {
             "model": r.model_name,

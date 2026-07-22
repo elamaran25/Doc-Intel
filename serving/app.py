@@ -1,10 +1,6 @@
 """
 FastAPI serving layer. Run with:
     uvicorn serving.app:app --reload --port 8000
-
-Endpoints:
-    POST /extract        -> upload a document, run the full extract+validate pipeline
-    GET  /health          -> liveness check
 """
 
 from __future__ import annotations
